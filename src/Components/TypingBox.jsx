@@ -54,7 +54,6 @@ const TypingBox = ({ }) => {
     }
 
     const handleDialogEvents = (e) => {
-        // the key down logic of dialog box will go
 
         // logic for space
         if (e.keyCode === 32) {
@@ -98,17 +97,7 @@ const TypingBox = ({ }) => {
     }
 
     const inputTextRef = useRef(null);
-    // console.log(Array(5));
-    //Array(4).fill(-1) => [{},{},{},{}]
-    /* wordSpanRef = [
-        {
-            current: null
-        },
-        {
-            current: null
-        },
-        ....
-     ] */
+
 
     //things needed for graphData - > correctChars-> to calculate wpm
 
@@ -186,9 +175,9 @@ const TypingBox = ({ }) => {
             }
             //removing the cursor from the word
             if (allChildrenSpans.length <= currCharIndex) {
-                //className = 'char correct right' , 'char incorrect right'
+
                 allChildrenSpans[currCharIndex - 1].classList.remove('right');
-                // allChildrenSpans[currCharIndex-1].className = allChildrenSpans[currCharIndex-1].className.replace('right','')
+
             }
             else {
                 allChildrenSpans[currCharIndex].className = allChildrenSpans[currCharIndex].className.replace('current', '');
@@ -235,7 +224,7 @@ const TypingBox = ({ }) => {
 
         if (currCharIndex === allChildrenSpans.length) {
 
-            let newSpan = document.createElement('span'); // -> <span></span>
+            let newSpan = document.createElement('span');
             newSpan.innerText = e.key;
             newSpan.className = 'char incorrect right extra';
             allChildrenSpans[currCharIndex - 1].className = allChildrenSpans[currCharIndex - 1].className.replace('right', '');
