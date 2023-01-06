@@ -9,7 +9,7 @@ const Footer = () => {
     const { setTheme, theme, defaultTheme } = useTheme();
 
     const handleThemeChange = (e) => {
-        // console.log(e);
+
         setTheme(e.value);
         localStorage.setItem('theme', JSON.stringify(e.value));
     }
