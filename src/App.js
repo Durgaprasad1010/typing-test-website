@@ -13,7 +13,7 @@ import { GlobalStyles } from "./Styles/global";
 
 function App() {
   const { theme } = useTheme();
-  console.log("Hi")
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
